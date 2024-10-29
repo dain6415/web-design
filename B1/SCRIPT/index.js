@@ -1,15 +1,17 @@
 // menu
 $('li.main-m').mouseenter(function(){
-  $(this).find('.sub-m').stop().slideDown()
+  // $(this).find('.sub-m').stop().slideDown()
+  $('.sub-m').stop().slideDown()
 })
 $('li.main-m').mouseleave(function(){
-  $(this).find('.sub-m').stop().slideUp()
+  // $(this).find('.sub-m').stop().slideUp()
+  $('.sub-m').stop().slideUp()
 })
 
 
 // slide
 setInterval(function(){
-  $('.slide-wrap').animate({'left':'-100%'},function(){
+  $('.slide-wrap').stop().animate({'left':'-100%'},function(){
   $('.slide:first').appendTo('.slide-wrap')
   $('.slide-wrap').css({'left':'0%'})
   })

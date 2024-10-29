@@ -1,3 +1,4 @@
+@charset "utf-8";
 * {
   margin: 0;
   padding: 0;
@@ -58,6 +59,7 @@ li.main-m {
 }
 li.main-m:not(:last-child) {
   border-right: none;
+  margin-right: -2px;
 }
 li.main-m > a {
   display: block;
@@ -74,6 +76,7 @@ li.main-m:hover > a {
   position: absolute;
   z-index: 99;
   width: 100%;
+  height: 170px;
   background: var(--bg);
 }
 .sub-m li > a {
@@ -87,7 +90,7 @@ li.main-m:hover > a {
 .slide-container {
   width: 1200px;
   height: 300px;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
 }
 .slide-wrap {
