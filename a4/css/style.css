@@ -1,0 +1,251 @@
+:root {
+  --main-color: #fff;
+  --sub-color: #fff;
+  --bg-color: #fff;
+  --txt-color: #333;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+}
+.flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ab-c {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: top;
+}
+body {
+  width: 1200px;
+  margin: auto;
+  color: var(--txt-color);
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+header {
+  height: 100px;
+}
+header::after {
+  content: "";
+  background: #2aa512;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  z-index: 99;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  transition: .35s;
+}
+header.on::after {
+  height: 150px;
+  z-index: 98;
+}
+h1 {
+  width: 200px;
+}
+h1 img {
+  width: 100%;
+}
+nav {
+  width: 60%;
+  align-self: flex-end;
+}
+ul li.main-m {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+ul li.main-m > a {
+  display: block;
+  padding: 20px;
+  border: 1px solid #000;
+}
+ul li.main-m:not(:last-child) > a{
+  border-right: none;
+}
+ul li.main-m:hover > a {
+  background: #2aa512;
+  color: #ffffff;
+}
+ul.sub-m {
+  display: none;
+  background: #2aa512;
+  color: #fff;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+}
+ul.sub-m li > a {
+  display: block;
+  padding: 10px;
+}
+ul.sub-m li:hover > a {
+  color: #000;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+.slide-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-wrap {
+  width: 100%;
+  position: relative;/* 페이드일땐 여기 안써도 됨 */
+}
+.slide {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  
+}
+.slide1 {
+  background: url(../img/슬라이드.jpg);
+}
+.slide2 {
+  background: url(../img/슬라이드2.jpg);
+}
+.slide3 {
+  background: url(../img/슬라이드3.jpg);
+}
+.summary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--bg-color);
+  padding: 20px;
+}
+h2 {
+  margin-bottom: 10px;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+.contents > div {
+  width: 33.3333%;
+  height: 200px;
+}
+.tab a {
+  display: inline-block;
+  padding: 8px 10px;
+  background: #ffe44c;
+}
+.notice {
+  border-right: 1px solid #999;
+}
+.notice ul,
+.gallery ul {
+  height: calc(100% - 37px);
+}
+.notice ul li,
+.gallery ul li {
+  padding: 10px;
+}
+.notice ul li {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+.notice ul li:nth-child(odd) {
+  background: #e2e2e2;
+}
+.notice ul li a {
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.link {
+  background: url(../img/배너.jpg);
+  position: relative;
+}
+.link p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 99px;
+  cursor: pointer;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+footer{
+  width: 100%;
+  height: 100px;
+  background: #ddd;
+  border-top: 1px solid #000;
+}
+.f-l{
+  width: 70%;
+}
+.f-l >div{
+  padding: 10px;
+}
+.f-menu ul{
+  gap: 20px;
+  color: #999;
+}
+.f-r{
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+}
+select{
+  /* height: 50%; */
+  width: 100%;
+  padding: 5px;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+.popup {
+  display: none;
+  width: 450px;
+  height: 450px;
+  border: 1px solid #000;
+  padding: 20px;
+  background: var(--bg-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.close {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 20px;
+}

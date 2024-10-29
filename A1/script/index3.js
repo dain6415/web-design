@@ -8,6 +8,7 @@
 // 슬라이드로~ 전체로
 $('li.main-m').mouseenter(function(){
   $('ul.sub-m').stop().fadeIn()
+  
 })
 $('li.main-m').mouseenter(function(){
   $('ul.sub-m').stop().fadeOut()
