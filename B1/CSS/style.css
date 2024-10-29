@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main: #0baefa;
+  --sub: #e9e9e9;
+  --bg: #fff;
+  --txt: #333;
+}
+.flex {
+  display: flex;
+}
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body {
+  color: var(--txt);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* ------------------------------------------------------------ */
+header {
+  width: 100%;
+  height: 100px;
+  background: var(--bg);
+}
+.wrap {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+nav {
+  width: 60%;
+}
+li.main-m {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  border: 1px solid #000;
+}
+li.main-m:not(:last-child) {
+  border-right: none;
+}
+li.main-m > a {
+  display: block;
+  padding: 10px;
+  background: var(--main);
+  color: var(--bg);
+}
+li.main-m:hover > a {
+  background: #92d7f7;
+  color: var(--txt);
+}
+.sub-m {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  background: var(--bg);
+}
+.sub-m li > a {
+  display: block;
+  padding: 10px;
+}
+.sub-m li:hover > a {
+  background: #92d7f7;
+}
+/* ------------------------------------------------------------ */
+.slide-container {
+  width: 1200px;
+  height: 300px;
+  /* overflow: hidden; */
+  position: relative;
+}
+.slide-wrap {
+  position: relative;
+  width: 3600px;
+}
+.slide {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.slide1 {
+  background: url(../img/슬라이드1.jpg);
+}
+.slide2 {
+  background: url(../img/슬라이드2.jpg);
+}
+.slide3 {
+  background: url(../img/슬라이드3.jpg);
+}
+.summary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: var(--bg);
+  background: rgba(0, 0, 0, 0.6);
+}
+/* ------------------------------------------------------------ */
+.contents > div {
+  width: 33.3333%;
+  height: 200px;
+}
+
+.tablist ul li {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+.tablist ul li.on {
+  background: var(--main);
+  color: var(--bg);
+  border: 1px solid #000;
+  border-bottom: none;
+}
+.tabs{
+position: relative;
+}
+.tab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.tab.on{
+  display: block;
+}
+.notice ul,
+.gallery ul {
+  width: 100%;
+  height: calc(200px - 42.22px);
+  background: var(--bg);
+}
+.notice ul li {
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
+.notice ul li:hover{
+  background: var(--sub);
+}
+.notice ul li:not(:last-child) {
+  border-bottom: 1px solid var(--sub);
+}
+.notice ul li a {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.banner,
+.link {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.banner p,
+.link p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--bg);
+  border-radius: 99px;
+}
+.banner {
+  background: url(../img/배너1.jpg);
+}
+.link {
+  background: url(../img/배너2.jpg);
+}
+/* ------------------------------------------------------------ */
+footer{
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.f-logo{
+  width: 10%;
+}
+.f-r{
+  width: 85%;
+  padding: 10px;
+}
+.f-menu{margin-bottom: 10px;}
+.f-menu ul{
+  gap: 20px;
+}
+/* ------------------------------------------------------------ */
+.popup{
+  display: none;
+  width: 400px;
+  height: 450px;
+  background: var(--bg);
+  border: 1px solid #000;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close{
+  position: absolute;
+  bottom: 0;right: 0;
+  padding: 10px;
+  background: #000;
+  color: var(--bg);
+}

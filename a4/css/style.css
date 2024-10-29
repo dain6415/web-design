@@ -51,13 +51,12 @@ header {
 header::after {
   content: "";
   background: #2aa512;
-  width: 100%;
+  width: 1200px;
+  margin: auto;
   height: 0;
-  position: absolute;
   z-index: 99;
   position: absolute;
   top: 100px;
-  left: 0;
   transition: .35s;
 }
 header.on::after {
