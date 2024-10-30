@@ -1,0 +1,81 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --main:#293b6d;
+  --sub:#f0f0f0;
+  --txt:#333;
+  --bg:#fff;
+}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{vertical-align: top;}
+.flex{display: flex;}
+.flex-c{display: flex; align-items: center; justify-content: center;}
+.flex-sb{display: flex; align-items: center; justify-content: space-between;}
+.wrap{width: 1200px; margin: auto;}
+body{background: var(--bg);}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+header{width: 100%;background: #293b6d;}
+header .wrap{ height: 100px; position: relative;}
+h1 img{filter: invert(10);}
+nav{width: 60%; align-self:flex-end;}
+li.main-m{flex: 1; color: var(--bg); text-align: center; border: 1px solid #adadad; border-bottom: none; position: relative;}
+li.main-m > a{display: block; padding: 15px;}
+li.main-m:not(:last-child){border-right: none;}
+li.main-m:hover > a{background: var(--bg); color: #293b6d; font-weight: 900;}
+.sub-m{position: absolute;z-index: 99; width: 100%; display: none;}
+.sub-m li >a{display: block; color: #333; padding: 6px;}
+.sub-m li:hover >a{background: var(--sub);}
+header::before{
+content: '';
+width: 1200px;
+height: 0;
+background: rgba(255, 255, 255, 0.8); z-index: 90;
+position: absolute; left: 50%;transform: translateX(-50%); top: 100px; transition: 1s;
+}
+header.on::before{height: 150px;}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+.slide-container{width: 100%;height: 300px; overflow: hidden;}
+.slide-wrap{width: 300%; position: relative;}
+.slide{background-position: center; background-size: cover; background-repeat: no-repeat;height: 300px;width: 100%;position: relative;}
+.slide1{background-image: url(../img/s1.jpg);}
+.slide2{background-image: url(../img/s2.jpg);}
+.slide3{background-image: url(../img/s3.jpg);}
+.summary{position: absolute; left: 0;bottom: 0; width: 100%; padding: 20px;  background: rgba(0, 0, 0, 0.5); color: var(--bg);}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+.contents>div{width: 33.3333%; height: 200px; padding: 5px;border: 1px solid #d4d4d4;}
+.contents>div:not(:last-child){border-left: none;}
+.notice .tab, .gallery .tab{padding: 10px;background: #adadad; }
+.notice ul, .gallery ul{width: 100%;height: calc(200px - 41.11px);}
+.notice ul li{display: flex;justify-content: space-between; padding: 8px;}
+.notice ul li:not(:last-child){border-bottom: 1px solid #ddd;}
+.notice ul li:hover{
+  background: var(--sub);
+}
+.gallery ul li:hover img{filter: brightness(80%);}
+.notice ul li a{width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.banner{background: url(../img/b2.jpg);position: relative;}
+.banner::before{content: ''; background:  rgba(0, 0, 0, 0.3); z-index: 1; width: 100%;height: 100%; position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.banner p{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 10px 20px; background: rgba(0, 0, 0, 0.7); border-radius: 99px; color: var(--bg);z-index: 22;}
+.banner p:hover{background: rgba(0, 0, 0, 0.9);}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+.popup{background: var(--bg); width: 500px;height: 450px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 20px; text-align: center; border: 1px solid #000; z-index: 999; display: none;}
+.popup h3{margin-bottom: 20px; font-size: 24px;}
+.popup .close{position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background: #000; color: var(--bg); width: 100%; padding: 10px; cursor: pointer;}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+footer{width: 100%;}
+footer .wrap{height: 100px;}
+
+.f-left{width: 80%; text-align: center;}
+.f-menu ul{gap: 20px;}
+.f-menu ul li{width: 40px;}
+.f-menu ul li a img{width: 100%;}
+.copyright{padding: 10px;}
+.f-right{width: 20%; padding: 20px; text-align: center;}
+select{
+  width: 90%; height: 40px;
+}
