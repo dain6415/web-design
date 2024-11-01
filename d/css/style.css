@@ -1,0 +1,300 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+}
+.flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body {
+  width: 100%;
+  color: #333;
+}
+.wrap {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* _______________________________________________________________________________________________________________ */
+header {
+  width: 200px;
+  height: 800px;
+  border: 1px solid #000;
+}
+h1 {
+  width: 90%;
+  margin: auto;
+}
+h1 img {
+  width: 100%;
+}
+nav {
+  width: 90%;
+  margin: auto;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 164px;
+  top: 51px;
+  left: 189px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+nav.on {
+  width: 100%;
+}
+.main-m {
+  text-align: center;
+  position: relative;
+}
+.main-m > a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #333;
+}
+.main-m:hover > a {
+  background: #000;
+  color: #fff;
+}
+ul.sub-m {
+  height: 43px;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+ul.sub-m.on {display: block;}
+ul.sub-m li > a {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  height: 100%;
+  text-align: left;
+}
+ul.sub-m li:hover > a {
+  background: rgba(255, 255, 255, 0.5);
+}
+.outlink {
+  width: 90%;
+  margin: auto;
+}
+.outlink > div a {
+  padding: 10px;
+}
+.outlink .first {
+  border-right: 1px solid #000;
+}
+
+/* _______________________________________________________________________________________________________________ */
+.container {
+  width: 100%;
+}
+
+.slide-container {
+  width: calc(100% - 230px);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.slide-wrap {
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide1 {
+  background: url(../IMG/s1.jpg);
+}
+.slide2 {
+  background: url(../IMG/s2.jpg);
+}
+.slide3 {
+  background: url(../IMG/s3.jpg);
+}
+.slide .summary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.banner {
+  width: 230px;
+  height: 400px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* _______________________________________________________________________________________________________________ */
+.link {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #000;
+  padding: 20px;
+}
+.link ul {
+  gap: 80px;
+}
+.link ul li {
+  height: calc(150px - 40px);
+}
+.link ul li img {
+  height: 100%;
+}
+/* _______________________________________________________________________________________________________________ */
+.tabbox {
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  border: 1px solid #000;
+  position: relative;
+}
+.tablist ul li a {
+  display: block;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
+.tablist ul li.on a {
+  background: #fff;
+  color: #333;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.tabs {
+  width: 100%;
+  height: calc(250px - 81px);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-top: -1px;
+  position: relative;
+}
+.tab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.notice {
+  width: 100%;
+}
+.notice ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.notice ul li:hover {
+  background: #ddd;
+}
+.notice ul li {
+  border-bottom: 1px solid #000;
+}
+.notice ul li a {
+  width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gallery {
+  padding: 10px;
+}
+.gallery ul {
+  height: calc(250px - 92px);
+}
+.gallery ul {
+  gap: 40px;
+}
+.gallery ul li {
+  height: calc(100% - 10px);
+}
+.gallery ul li img {
+  height: 100%;
+}
+.gallery ul li:hover img {
+  filter: opacity(0.8);
+}
+/* _______________________________________________________________________________________________________________ */
+footer{
+  height: 120px;
+  width: 100%;
+  border: 1px solid #000;
+}
+.f-logo{width: 200px;}
+.f-logo img{width: 100%;}
+.f-container{
+  width: 100%;
+}
+.f-container>div{height: 60px;display: flex; align-items: center;}
+.f-menu{border-bottom: 1px solid #000;}
+.f-menu ul li a{padding-right: 40px; text-decoration: underline; color: blue;}
+.f-menu ul li:not(:first-child) a{padding-left: 40px;}
+.f-menu ul li:not(:last-child){
+  border-right: 1px solid #000;
+}
+/* _______________________________________________________________________________________________________________ */
+.popup{
+  width: 400px;height: 450px;
+  border: 1px solid #000;
+background: #fff;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+display: none;
+}
+.close a{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  display: block;
+  background: #000;
+  padding: 10px;
+  color: #fff;
+}

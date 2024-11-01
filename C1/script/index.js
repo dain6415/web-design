@@ -19,6 +19,7 @@ setInterval(function(){
   $('.slide').fadeOut()
   $('.slide').eq(idx).fadeIn()
 },3000)
+
 // tab
 $('.tablist ul li').click(function(){
   $('.tablist ul li').removeClass('on')
@@ -29,15 +30,7 @@ $('.tablist ul li').click(function(){
   $('.tab').hide()
   $('.tab').eq(idx).show()
 })
-// $('.tablist ul li').click(function(){
-//   $('.tablist ul li').removeClass('on')
-//   $(this).addClass('on')
 
-//   let idx = $(this).index() /* 변수 */
-
-//   $('.tab').hide()
-//   $('.tab').eq(idx).show()
-// })
 
 // popup
 $('.modal').click(function(){
